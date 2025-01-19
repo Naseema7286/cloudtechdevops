@@ -4,7 +4,7 @@
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1303.0.min.js"></script>
 </head>
 <body>
-    <input type="file" id="file" /><button onclick="upload()">Upload</button>
+    <input type="file" id="name" /><button onclick="upload()">Upload</button>
     <script>
         AWS.config.update({region: 'us-east-1', credentials: new AWS.CognitoIdentityCredentials({IdentityPoolId: 'YOUR_IDENTITY_POOL_ID'})});
         const s3 = new AWS.S3({params: {Bucket: 'YOUR_BUCKET_NAME'}});
